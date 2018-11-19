@@ -11,6 +11,18 @@ describe("twoSum", () => {
   it('returns an array', () => {
     numbers = [1, 2, 3];
     target = 5;
-    expect(twoSum([1, 2, 3], 5)).to.equal([1, 2]);
+    expect(Array.isArray(twoSum(numbers, target))).to.equal(true);
+  });
+
+  it('returns an empty array if none of the numbers add up to the target number.', () => {
+    numbers = [1, 2, 3];
+    target = 6;
+    expect(twoSum(numbers, target)).to.equal([]);
+  })
+
+  it('returns the index of the two numbers that add up to equal the target number', () => {
+    numbers = [1, 2, 3];
+    target = 5;
+    expect(twoSum(numbers, target)).to.equal([1, 2]);
   });
 });

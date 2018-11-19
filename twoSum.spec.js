@@ -16,13 +16,13 @@ describe("twoSum", () => {
 
   it('returns an empty array if none of the numbers add up to the target number.', () => {
     numbers = [1, 2, 3];
-    target = 6;
-    expect(twoSum(numbers, target)).to.equal([]);
-  })
+    target = 7;
+    expect(twoSum(numbers, target)).to.deep.equal([]);
+  });
 
   it('returns the index of the two numbers that add up to equal the target number', () => {
     numbers = [1, 2, 3];
     target = 5;
-    expect(twoSum(numbers, target)).to.equal([1, 2]);
+    expect(twoSum(numbers, target)).to.deep.equal([1, 2]);
   });
 });

@@ -7,7 +7,7 @@ function twoSum(numbers, target) {
     if (seen[numToFind] !== undefined) return [seen[numToFind], i];
     seen[currentNum] = i;
   }
-  return []
+  return [];
 };
 
 module.exports = twoSum;

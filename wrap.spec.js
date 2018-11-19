@@ -22,5 +22,11 @@ describe('wrap', () => {
     line = 'Lorem ipsum dolor sit eu amet, elit na magna sem amet nulla vel purus ac ligula.';
     maxLen = 20;
     expect(wrap(line, maxLen).indexOf("\n")).to.lessThan(maxLen).and.greaterThan(-1);
-  })
+  });
+
+  it('returns the correct answer', () => {
+    line = "coffee coffee coffee coffee";
+    maxLen = 13;
+    expect(wrap(line, maxLen)).to.equal("coffee coffee\ncoffee coffee");
+  });
 });
